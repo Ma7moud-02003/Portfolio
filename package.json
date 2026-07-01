@@ -1,0 +1,15 @@
+{
+  "name": "mahmoud-amr-portfolio",
+  "version": "2.0.0",
+  "description": "Full Stack Developer portfolio — Angular & NestJS focus.",
+  "private": true,
+  "license": "MIT",
+  "author": "Mahmoud Amr",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1",
+    "test": "echo \"No automated tests configured yet\" && exit 0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

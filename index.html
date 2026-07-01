@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahmoud Amr — Full Stack Developer (Angular & NestJS)</title>
+  <meta name="description" content="Mahmoud Amr is a Full Stack Developer building scalable web applications with Angular, NestJS, and PostgreSQL. View projects, skills, and experience." />
+  <meta name="author" content="Mahmoud Amr" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mahmoudamr.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mahmoud Amr — Full Stack Developer (Angular & NestJS)" />
+  <meta property="og:description" content="Full Stack Developer building scalable web applications with Angular, NestJS, and PostgreSQL." />
+  <meta property="og:image" content="./images/Mahmoud.png" />
+  <meta property="og:url" content="https://mahmoudamr.dev/" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mahmoud Amr — Full Stack Developer (Angular & NestJS)" />
+  <meta name="twitter:description" content="Full Stack Developer building scalable web applications with Angular, NestJS, and PostgreSQL." />
+  <meta name="twitter:image" content="./images/Mahmoud.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mahmoud Amr",
+    "jobTitle": "Full Stack Developer",
+    "description": "Full Stack Developer building scalable web applications with Angular, NestJS, and PostgreSQL.",
+    "url": "https://mahmoudamr.dev/",
+    "image": "./images/Mahmoud.png",
+    "email": "mailto:mahmoudamr2752003@email.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Menoufia",
+      "addressCountry": "EG"
+    },
+    "knowsAbout": ["Angular", "TypeScript", "NestJS", "Node.js", "PostgreSQL", "REST APIs"]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23dc2626'/%3E%3Ctext x='50' y='66' font-size='52' font-family='sans-serif' font-weight='800' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full top-0 left-0 z-[9999] transition-all duration-300 border-b border-white/5 bg-slate-900/80 backdrop-blur-md shadow-xl" aria-label="Primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+
+        <a href="#home" class="flex items-center gap-3 group" aria-label="Mahmoud Amr — home">
+          <div class="bg-red-600 p-2 rounded-xl shadow-lg shadow-red-600/20 group-hover:rotate-6 transition-transform duration-300">
+            <i class="fa-solid fa-code text-white text-lg" aria-hidden="true"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-white font-bold tracking-tight text-lg leading-tight font-display">Mahmoud Amr</span>
+            <span class="text-red-500 text-[0.65rem] uppercase tracking-widest font-semibold italic">Full Stack Developer</span>
+          </div>
+        </a>
+
+        <ul class="hidden md:flex items-center gap-1">
+          <li><a href="#home" class="nav-item active" aria-current="page">Home</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#skills" class="nav-item">Skills</a></li>
+          <li><a href="#projects" class="nav-item">Projects</a></li>
+          <li><a href="#education" class="nav-item">Education</a></li>
+          <li><a href="#internships" class="nav-item">Experience</a></li>
+        </ul>
+
+        <div class="hidden md:block">
+          <a href="#contact"
+            class="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-300 shadow-lg shadow-red-600/20 active:scale-95 inline-block">
+            Let's Talk
+          </a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+          aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars text-2xl" id="menu-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-slate-900/95 backdrop-blur-lg">
+      <ul class="px-4 pt-2 pb-6 space-y-2">
+        <li><a href="#home" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all">Home</a></li>
+        <li><a href="#about" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all">About</a></li>
+        <li><a href="#skills" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all">Skills</a></li>
+        <li><a href="#projects" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all">Projects</a></li>
+        <li><a href="#education" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all">Education</a></li>
+        <li><a href="#internships" class="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all">Experience</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content" class="w-full relative left-0 right-0">
+
+    <!-- HOME -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 py-32 px-6" id="home">
+
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10" aria-hidden="true">
+        <div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-red-600/10 blur-[120px] rounded-full"></div>
+        <div class="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-blue-600/10 blur-[120px] rounded-full"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+
+          <div class="flex-1 text-center md:text-left space-y-8">
+            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              <span class="text-gray-300 text-xs font-medium tracking-wide uppercase">Available For New Opportunities</span>
+            </div>
+
+            <div class="space-y-4">
+              <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight font-display">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Full Stack</span> Developer
+              </h1>
+              <p class="text-xl md:text-2xl text-gray-400 font-light">
+                Building Web Apps End-to-End with Angular &amp; NestJS
+              </p>
+            </div>
+
+            <p class="max-w-xl mx-auto md:mx-0 text-gray-400 leading-relaxed text-lg">
+              <span class="text-white font-semibold">Mahmoud Amr</span> builds complete web applications —
+              <span class="text-red-500">Angular</span> on the front end,
+              <span class="text-red-500">NestJS &amp; PostgreSQL</span> on the back end —
+              with a focus on clean architecture and real user experience.
+            </p>
+
+            <div class="flex flex-wrap justify-center md:justify-start items-center gap-6 pt-4">
+              <div class="flex -space-x-3" aria-hidden="true">
+                <div class="w-12 h-12 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center shadow-xl">
+                  <i class="fa-brands fa-angular text-red-500 text-xl"></i>
+                </div>
+                <div class="w-12 h-12 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center shadow-xl">
+                  <i class="fa-solid fa-cubes text-emerald-400 text-xl"></i>
+                </div>
+                <div class="w-12 h-12 rounded-full border-2 border-slate-900 bg-slate-800 flex items-center justify-center shadow-xl">
+                  <i class="fa-solid fa-database text-blue-400 text-xl"></i>
+                </div>
+              </div>
+              <div class="h-10 w-[1px] bg-white/10 hidden sm:block"></div>
+              <div class="text-left">
+                <p class="text-white font-bold text-xl leading-none">Math &amp; CS, Class of 2026</p>
+                <p class="text-gray-500 text-sm italic">Menoufia University · DEPI Front-End Intern</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-6">
+              <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-red-600/25 text-center">
+                Contact Me
+              </a>
+              <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold rounded-xl transition-all duration-300 backdrop-blur-sm text-center">
+                View Projects
+              </a>
+            </div>
+          </div>
+
+          <div class="flex-1 relative group">
+            <div class="relative z-10 w-64 h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] mx-auto overflow-hidden rounded-[2rem] border-2 border-white/10 shadow-2xl">
+              <img src="./images/Mahmoud.png" alt="Portrait of Mahmoud Amr" width="450" height="450"
+                class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" aria-hidden="true"></div>
+            </div>
+
+            <div class="absolute -bottom-6 -left-6 md:left-0 bg-slate-800/90 backdrop-blur-md border border-white/10 p-5 rounded-2xl shadow-2xl z-20 hidden sm:block">
+              <p class="text-red-500 font-black text-2xl italic leading-none">Angular + NestJS</p>
+              <p class="text-white text-xs uppercase tracking-widest font-bold mt-1">Full Stack Builds</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 px-6 bg-slate-900">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="flex items-center gap-4 mb-6">
+          <div class="h-[2px] w-12 bg-red-600" aria-hidden="true"></div>
+          <span class="text-red-500 font-bold uppercase tracking-widest text-sm">About Me</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+          <div class="space-y-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight font-display">
+              Engineering Depth &amp; <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">Architecture</span>
+            </h2>
+
+            <div class="text-gray-400 text-lg leading-relaxed space-y-6">
+              <p>
+                I'm a <span class="text-white font-semibold">Full Stack Developer</span> who builds complete
+                products — Angular front ends backed by NestJS APIs — and believes a great app should feel
+                simple and fast for the person using it.
+              </p>
+              <p>
+                I take the time to understand the
+                <span class="text-red-500 font-bold italic underline decoration-red-500/30">problem behind the request</span>,
+                then design a data model and UI that fit it, instead of bolting features on.
+              </p>
+              <p class="border-l-4 border-red-600 pl-6 py-2 italic bg-white/5 rounded-r-xl">
+                "Real success means delivering something you're truly satisfied with — not just well-written code."
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-3 pt-4">
+              <span class="px-4 py-2 bg-slate-800 border border-white/5 text-gray-300 text-xs rounded-lg uppercase tracking-wider font-bold">Clean Architecture</span>
+              <span class="px-4 py-2 bg-slate-800 border border-white/5 text-gray-300 text-xs rounded-lg uppercase tracking-wider font-bold">Scalability</span>
+              <span class="px-4 py-2 bg-slate-800 border border-white/5 text-gray-300 text-xs rounded-lg uppercase tracking-wider font-bold">User-Centric</span>
+            </div>
+          </div>
+
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-red-600/20 to-blue-600/20 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000" aria-hidden="true"></div>
+
+            <div class="relative bg-slate-800/50 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-2xl shadow-2xl">
+              <div class="flex items-center gap-3 mb-10">
+                <div class="p-2 bg-red-600/10 rounded-lg">
+                  <i class="fa-solid fa-layer-group text-red-500 text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white tracking-tight">Technical Focus Areas</h3>
+              </div>
+
+              <div class="space-y-8">
+                <div class="space-y-3">
+                  <div class="flex justify-between items-end">
+                    <span class="text-gray-200 font-semibold tracking-wide">Angular &amp; TypeScript</span>
+                    <span class="text-red-500 font-bold text-sm">Core strength</span>
+                  </div>
+                  <div class="w-full bg-slate-700 h-2.5 rounded-full overflow-hidden p-[1px]">
+                    <div class="bg-gradient-to-r from-red-600 to-red-400 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                  </div>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="flex justify-between items-end">
+                    <span class="text-gray-200 font-semibold tracking-wide">NestJS &amp; REST APIs</span>
+                    <span class="text-red-500 font-bold text-sm">Growing strength</span>
+                  </div>
+                  <div class="w-full bg-slate-700 h-2.5 rounded-full overflow-hidden p-[1px]">
+                    <div class="bg-gradient-to-r from-red-600 to-red-400 h-full rounded-full transition-all duration-1000" style="width: 70%"></div>
+                  </div>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="flex justify-between items-end">
+                    <span class="text-gray-200 font-semibold tracking-wide">PostgreSQL &amp; TypeORM</span>
+                    <span class="text-red-500 font-bold text-sm">Applied</span>
+                  </div>
+                  <div class="w-full bg-slate-700 h-2.5 rounded-full overflow-hidden p-[1px]">
+                    <div class="bg-gradient-to-r from-red-600 to-red-400 h-full rounded-full transition-all duration-1000" style="width: 60%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-12 p-4 bg-white/5 border-t border-white/5 rounded-b-2xl -mx-10 -mb-10">
+                <p class="text-center text-gray-500 text-sm italic">
+                  Continually evolving with the modern web ecosystem
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-white/5" />
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-24 bg-slate-900 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          <div class="space-y-6">
+            <div class="inline-block bg-red-600/10 border border-red-600/20 text-red-500 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+              Academic &amp; Professional Journey
+            </div>
+            <h2 class="text-5xl md:text-6xl font-black text-white leading-tight font-display">
+              Education &amp; <span class="text-red-600">Experience</span>
+            </h2>
+            <p class="text-gray-400 text-lg max-w-md">
+              A journey of continuous learning, academic study, and hands-on development practice
+              focused on building complete web applications.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-gray-300 text-sm">
+                <i class="fa-solid fa-location-dot text-red-500" aria-hidden="true"></i>
+                Menoufia, Egypt
+              </div>
+              <a href="mailto:mahmoudamr2752003@email.com" class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10 text-gray-300 text-sm hover:text-white hover:border-red-600/30 transition-colors">
+                <i class="fa-solid fa-envelope text-red-500" aria-hidden="true"></i>
+                mahmoudamr2752003@email.com
+              </a>
+            </div>
+          </div>
+
+          <div class="relative group hidden lg:block">
+            <div class="absolute inset-0 bg-red-600/20 blur-[100px] rounded-full" aria-hidden="true"></div>
+            <div class="relative border-2 border-red-600/30 rounded-3xl p-4 rotate-3 group-hover:rotate-0 transition-transform duration-500 bg-slate-800/40 backdrop-blur-md">
+              <div class="bg-slate-900 rounded-2xl overflow-hidden -rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                <img src="./images/Selection.png" class="w-full opacity-80 group-hover:opacity-100 transition-opacity" alt="Academic achievement selection certificate" loading="lazy" />
+                <div class="p-6 flex items-center gap-4 bg-white/5 backdrop-blur-xl border-t border-white/10">
+                  <div class="w-12 h-12 rounded-2xl bg-red-600 flex items-center justify-center shadow-lg shadow-red-600/30">
+                    <i class="fa-solid fa-award text-white text-xl" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <p class="text-gray-400 text-xs uppercase font-bold tracking-tighter">Academic Status</p>
+                    <p class="text-white font-bold text-xl">GPA 3.0 <span class="text-red-500 text-sm">/ 4.0</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-12">
+
+          <div class="relative pl-8 md:pl-0">
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-white/5" aria-hidden="true"></div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div class="md:w-5/12 text-right hidden md:block">
+                <span class="text-red-500 font-black text-lg">2022 — 2026</span>
+              </div>
+
+              <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-10 h-10 bg-slate-900 border-4 border-red-600 rounded-full z-10 flex items-center justify-center" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap text-white text-xs"></i>
+              </div>
+
+              <div class="md:w-5/12 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm hover:border-red-600/50 transition-colors">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-white leading-tight">Bachelor's Degree in Math &amp; Computer Science</h3>
+                  <span class="md:hidden text-red-500 font-bold text-xs">2022 — 2026</span>
+                </div>
+                <p class="text-red-500 font-semibold mb-4">Faculty of Science, Menoufia University</p>
+                <div class="flex gap-3">
+                  <span class="px-3 py-1 bg-white/5 rounded-lg border border-white/10 text-gray-400 text-xs">Grade: Very Good</span>
+                  <span class="px-3 py-1 bg-red-600 text-white rounded-lg text-xs font-bold">GPA: 3.0 / 4.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative pl-8 md:pl-0" id="internships">
+            <div class="flex flex-col md:flex-row-reverse items-center justify-between gap-8">
+              <div class="md:w-5/12 text-left hidden md:block">
+                <span class="text-red-500 font-black text-lg">Current / Round 4</span>
+              </div>
+
+              <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-10 h-10 bg-slate-900 border-4 border-red-600 rounded-full z-10 flex items-center justify-center" aria-hidden="true">
+                <i class="fa-solid fa-briefcase text-white text-xs"></i>
+              </div>
+
+              <div class="md:w-5/12 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm hover:border-red-600/50 transition-colors">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-white">Front-End Development Intern</h3>
+                  <span class="md:hidden text-red-500 font-bold text-xs">DEPI Round 4</span>
+                </div>
+                <p class="text-gray-300 font-medium mb-4 italic text-sm">Digital Egypt Pioneers Initiative (DEPI) – MCIT</p>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1" aria-hidden="true"></i> Intensive Angular framework training</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1" aria-hidden="true"></i> Responsive UI &amp; cross-browser implementation</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-red-500 mt-1" aria-hidden="true"></i> REST API integration &amp; state management</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative pl-8 md:pl-0">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div class="md:w-5/12 text-right hidden md:block">
+                <span class="text-red-500 font-black text-lg">Continuous</span>
+              </div>
+
+              <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-10 h-10 bg-slate-900 border-4 border-red-600 rounded-full z-10 flex items-center justify-center" aria-hidden="true">
+                <i class="fa-solid fa-book-open text-white text-xs"></i>
+              </div>
+
+              <div class="md:w-5/12 bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm hover:border-red-600/50 transition-colors">
+                <div class="flex justify-between items-center mb-6">
+                  <h3 class="text-xl font-bold text-white">Self-Directed Backend Study</h3>
+                  <span class="bg-red-600/20 text-red-500 text-[10px] px-2 py-1 rounded-md font-black uppercase tracking-widest">Self-Learning</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                  <div class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-xl border border-white/5 text-gray-300">
+                    <i class="fa-solid fa-cubes text-red-500" aria-hidden="true"></i> NestJS &amp; Node.js
+                  </div>
+                  <div class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-xl border border-white/5 text-gray-300">
+                    <i class="fa-solid fa-database text-red-500" aria-hidden="true"></i> PostgreSQL &amp; TypeORM
+                  </div>
+                  <div class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-xl border border-white/5 text-gray-300">
+                    <i class="fa-solid fa-key text-red-500" aria-hidden="true"></i> JWT Auth &amp; Authorization
+                  </div>
+                  <div class="flex items-center gap-2 bg-slate-800/50 p-3 rounded-xl border border-white/5 text-gray-300">
+                    <i class="fa-solid fa-gauge-high text-red-500" aria-hidden="true"></i> REST API Design
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS (rendered by js/ui.js renderSkills()) -->
+    <section class="py-20 bg-slate-900 px-6" id="skills" aria-labelledby="skills-heading">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div class="flex justify-center items-center gap-3 font-bold text-red-600 mb-2">
+            <div class="h-[2px] w-12 bg-red-600" aria-hidden="true"></div>
+            <p class="uppercase tracking-widest text-sm">Skills</p>
+            <div class="h-[2px] w-12 bg-red-600" aria-hidden="true"></div>
+          </div>
+          <h2 id="skills-heading" class="text-4xl font-black text-white font-display">Core Competencies</h2>
+          <p class="text-gray-400 mt-3 max-w-xl mx-auto">Organized by where each technology sits in the stack.</p>
+        </div>
+
+        <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Populated by renderSkills() in js/ui.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (rendered by js/ui.js renderProjects()) -->
+    <section class="py-20 bg-slate-950 px-6" id="projects" aria-labelledby="projects-heading">
+      <div class="max-w-7xl mx-auto">
+        <h2 id="projects-heading" class="text-4xl font-black text-white mb-3 text-center font-display">Featured Projects</h2>
+        <p class="text-gray-400 text-center max-w-xl mx-auto mb-12">Angular applications built end-to-end, from UI to data layer.</p>
+
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Populated by renderProjects() in js/ui.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Project details overlay -->
+    <div id="project-details-page" class="fixed top-20  inset-0 z-[100] bg-slate-950 hidden overflow-y-auto animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="project-title">
+      <button id="close-project-btn" type="button" aria-label="Close project details"
+        class="fixed  top-40 left-6 z-[110] bg-white/10 hover:bg-red-600 text-white px-3 py-2 rounded-full backdrop-blur-md transition-all shadow-xl">
+        <i class="fa-solid fa-xmark text-2xl" aria-hidden="true"></i>
+      </button>
+
+      <div class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          <div class="lg:col-span-7 space-y-6">
+            <div class="relative group rounded-3xl overflow-hidden bg-slate-900 border border-white/10 shadow-2xl">
+              <img id="main-view-img" src="" alt="" class="w-full h-auto object-cover cursor-zoom-in transition-transform duration-700 hover:scale-105" />
+              <div class="absolute inset-0 bg-black/20 pointer-events-none" aria-hidden="true"></div>
+            </div>
+
+            <div id="thumbnails-container" class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide" role="list" aria-label="Project screenshots"></div>
+
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <h3 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-3">Key Features</h3>
+              <ul id="project-features" class="space-y-2"></ul>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-8">
+            <div>
+              <h1 id="project-title" class="text-4xl md:text-5xl font-black text-white mb-2 tracking-tighter font-display"></h1>
+              <p id="project-role" class="text-gray-400 text-sm mb-4"></p>
+              <div id="project-skills" class="flex flex-wrap gap-2"></div>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-xs font-bold text-red-500 uppercase tracking-widest">Project Overview</h3>
+              <p id="project-desc" class="text-gray-400 text-lg leading-relaxed font-light"></p>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-xs font-bold text-red-500 uppercase tracking-widest">Challenges &amp; Solutions</h3>
+              <p id="project-challenges" class="text-gray-400 leading-relaxed"></p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/5">
+              <a id="project-link" href="#" target="_blank" rel="noopener noreferrer"
+                class="flex-1 bg-red-600 hover:bg-red-700 text-white text-center py-4 rounded-2xl font-bold shadow-lg shadow-red-600/30 transition-all active:scale-95 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i> Live Demo
+              </a>
+              <a id="project-github" href="#" target="_blank" rel="noopener noreferrer"
+                class="flex-1 bg-slate-800 hover:bg-slate-700 text-white text-center py-4 rounded-2xl font-bold border border-white/10 transition-all active:scale-95 flex items-center justify-center gap-2">
+                <i class="fa-brands fa-github text-xl" aria-hidden="true"></i> GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fullscreen image modal -->
+    <div id="fullscreen-modal" class="fixed inset-0 z-[120] bg-black/95 hidden flex items-center justify-center p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="Fullscreen screenshot">
+      <button id="close-fullscreen-btn" type="button" aria-label="Close fullscreen image" class="absolute top-10 right-10 text-white text-4xl hover:text-red-500">&times;</button>
+      <img id="modal-img" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl transition-transform duration-300" />
+    </div>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 bg-slate-900" id="contact" aria-labelledby="contact-heading">
+      <div class="max-w-5xl mx-auto relative overflow-hidden bg-gradient-to-br from-red-600 to-red-800 rounded-[3rem] shadow-2xl shadow-red-600/20">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl" aria-hidden="true"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full -ml-20 -mb-20 blur-3xl" aria-hidden="true"></div>
+
+        <div class="relative z-10 px-8 py-16 md:py-20 text-center text-white">
+          <h2 id="contact-heading" class="text-4xl md:text-6xl font-black mb-8 leading-tight font-display">
+            Ready to build <br class="hidden md:block" /> something amazing?
+          </h2>
+          <p class="text-red-100 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium opacity-90">
+            I'm always open to new opportunities and collaborations. Whether you have a project in mind
+            or just want to connect, let's create something great together.
+          </p>
+
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+            <a href="mailto:mahmoudamr2752003@email.com"
+              class="w-full sm:w-auto bg-white text-red-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-100 transition-all active:scale-95 shadow-xl">
+              Get In Touch
+            </a>
+            <a href="https://wa.me/01094663471" target="_blank" rel="noopener noreferrer"
+              class="w-full sm:w-auto bg-slate-900/20 border border-white/30 backdrop-blur-md text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all active:scale-95">
+              WhatsApp Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-950 border-t border-white/5 pt-20 pb-10" id="footer">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
+              <i class="fa-solid fa-code text-white" aria-hidden="true"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-white tracking-tighter font-display">Mahmoud Amr</h2>
+          </div>
+          <p class="text-gray-400 leading-relaxed">
+            Full Stack Developer specializing in Angular and NestJS, focused on building clean,
+            scalable web applications from front end to database.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://github.com/Ma7moud-02003" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-300">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-300">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <nav aria-label="Footer">
+          <h3 class="text-white font-bold text-lg mb-8 relative inline-block">
+            Quick Links
+            <span class="absolute -bottom-2 left-0 w-8 h-1 bg-red-600 rounded-full" aria-hidden="true"></span>
+          </h3>
+          <ul class="grid grid-cols-1 gap-4">
+            <li><a href="#home" class="text-gray-400 hover:text-red-500 transition-colors flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i> Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-red-500 transition-colors flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i> About</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-red-500 transition-colors flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i> Projects</a></li>
+            <li><a href="#skills" class="text-gray-400 hover:text-red-500 transition-colors flex items-center gap-2 group"><i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform" aria-hidden="true"></i> Skills</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-white font-bold text-lg mb-8 relative inline-block">
+            Contact Details
+            <span class="absolute -bottom-2 left-0 w-8 h-1 bg-red-600 rounded-full" aria-hidden="true"></span>
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-envelope text-red-500 mt-1" aria-hidden="true"></i>
+              <div>
+                <p class="text-white text-sm font-semibold">Email Me</p>
+                <a href="mailto:mahmoudamr2752003@email.com" class="text-gray-400 text-sm hover:text-white transition-colors">mahmoudamr2752003@email.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <i class="fa-brands fa-whatsapp text-green-500 mt-1" aria-hidden="true"></i>
+              <div>
+                <p class="text-white text-sm font-semibold">WhatsApp</p>
+                <a href="https://wa.me/01094663471" target="_blank" rel="noopener noreferrer" class="text-gray-400 text-sm hover:text-white transition-colors">01094663471</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot text-red-500 mt-1" aria-hidden="true"></i>
+              <div>
+                <p class="text-white text-sm font-semibold">Location</p>
+                <p class="text-gray-400 text-sm">Menoufia, Egypt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-gray-400 text-sm text-center md:text-left">
+          © 2026 <span class="text-white font-bold tracking-tighter">Mahmoud Amr</span>. All rights reserved.
+        </p>
+        <div class="flex items-center gap-2 text-gray-400 text-xs">
+          Built with <i class="fa-solid fa-heart text-red-600 animate-pulse" aria-hidden="true"></i> and <span class="text-white underline">Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="module" src="./js/main.js"></script>
+  <!-- <script src="./js//ui.js"></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => window.AOS && AOS.init({ once: true, duration: 600 }));
+  </script>
+</body>
+
+</html>
