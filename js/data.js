@@ -92,6 +92,36 @@ export const projects = [
     github: 'https://github.com/Ma7moud-02003/FixIt.git',
     link: 'https://fix-it-bay.vercel.app/',
   },
+
+{
+  id: 'hefza',
+  title: 'حفظه — منصة القرآن الكريم',
+  summary: 'منصة متكاملة لقراءة القرآن الكريم وحفظه مع عرض التفسير في واجهة بسيطة وسهلة الاستخدام.',
+  description:
+    'تطبيق قرآن كريم تم تطويره باستخدام Angular وFirebase، يوفر تجربة سلسة لقراءة القرآن الكريم، تصفح السور، عرض التفسير، والتنقل السريع بين الآيات، مع تصميم متجاوب يعمل بكفاءة على مختلف الأجهزة.',
+  role:
+    'قمت بتصميم وتطوير التطبيق بالكامل، بدءًا من واجهات المستخدم وحتى ربط البيانات باستخدام Firebase وتحسين تجربة الاستخدام.',
+  stack: ['Angular', 'TypeScript', 'Firebase', 'Bootstrap'],
+  features: [
+    'عرض القرآن الكريم كاملًا',
+    'إظهار تفسير الآيات',
+    'التنقل السريع بين السور والآيات',
+    'تصميم متجاوب يدعم جميع الأجهزة',
+    'واجهة قراءة مريحة وسهلة الاستخدام',
+    'إدارة البيانات وربطها باستخدام Firebase',
+  ],
+  challenges:
+    'كان التحدي الرئيسي هو تحسين أداء تحميل بيانات القرآن الكريم والتفسير مع الحفاظ على سرعة التنقل بين السور والآيات، وتم ذلك من خلال تنظيم البيانات وتقليل عمليات التحميل غير الضرورية.',
+  images: [
+    './images/work/Quran/main.png',
+    './images/work/Quran/1.png',
+    './images/work/Quran/2.png',
+    './images/work/Quran/3.png',
+    './images/work/Quran/4.png',
+  ],
+  github: 'https://github.com/Ma7moud-02003/Ramadan.git',
+  link: 'https://ramadan-beta-taupe.vercel.app/',
+},
   {
     id: 'burgur',
     title: 'Burgur — Restaurant Ordering Site',
@@ -120,6 +150,59 @@ export const projects = [
     github: 'https://github.com/Ma7moud-02003/Burgur.git',
     link: 'https://burgur-nu.vercel.app/User',
   },
+
+  {
+  id: 'furnizone',
+  title: 'FurniZone — Furniture E-Commerce Platform',
+  summary:
+    'A full-featured furniture e-commerce platform with a customer storefront and an advanced admin dashboard.',
+  description:
+    'FurniZone is a graduation project developed as part of the Digital Egypt Pioneers Initiative (DEPI). Built collaboratively with my team, the platform provides a complete online furniture shopping experience, including product browsing, secure authentication, order management, and a powerful admin dashboard for managing the entire store.',
+  role:
+    'Collaborated with the team to develop both the customer-facing platform and the admin dashboard, contributing to frontend development, Firebase integration, and core application features.',
+stack: [
+  'Angular',
+  'ASP.NET Core',
+  'MongoDB',
+  'TypeScript',
+  'Tailwind CSS',
+],
+  features: [
+    'User authentication ',
+    'Product categories and advanced search',
+    'Shopping cart and checkout system',
+    'Wishlist functionality',
+    'Order management and tracking',
+    'Product reviews and ratings',
+    'Responsive design for all devices',
+    'Comprehensive admin dashboard',
+    'Product, category, and inventory management',
+    'Real-time database synchronization',
+  ],
+  challenges:
+    'One of the main challenges was coordinating development across multiple team members while maintaining a consistent architecture and integrating customer and admin features into a seamless, scalable application.',
+  images: [
+    './images/work/FurniZone/main.png',
+    './images/work/FurniZone/1.png',
+    './images/work/FurniZone/2.png',
+    './images/work/FurniZone/3.png',
+    './images/work/FurniZone/4.png',
+    './images/work/FurniZone/5.png',
+    './images/work/FurniZone/6.png',
+    './images/work/FurniZone/7.png',
+    './images/work/FurniZone/8.png',
+    './images/work/FurniZone/9.png',
+    './images/work/FurniZone/10.png',
+    './images/work/FurniZone/11.png',
+    './images/work/FurniZone/12.png',
+    './images/work/FurniZone/13.png',
+    './images/work/FurniZone/14.png',
+    './images/work/FurniZone/15.png',
+    './images/work/FurniZone/16.png',
+  ],
+  github: 'https://github.com/Basant-Ali/FurniZone.git',
+  link: 'https://furni-zone-ten.vercel.app/',
+},
   {
     id: 'burgur-admin',
     title: 'Burgur — Admin Dashboard',
