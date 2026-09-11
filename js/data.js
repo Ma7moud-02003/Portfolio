@@ -201,7 +201,7 @@ stack: [
     './images/work/FurniZone/16.png',
   ],
   github: 'https://github.com/Basant-Ali/FurniZone.git',
-  link: 'https://furni-zone-ten.vercel.app/',
+  link: 'https://furni-zone-jp6e.vercel.app/home',
 },
   {
     id: 'burgur-admin',
