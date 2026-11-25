@@ -8,10 +8,10 @@
 import { skillGroups, projects } from './data.js';
 
 const accentMap = {
-  red: { text: 'text-red-500', ring: 'group-hover:border-red-600/50', glow: 'group-hover:shadow-red-600/10', bg: 'bg-red-600/10' },
-  emerald: { text: 'text-emerald-400', ring: 'group-hover:border-emerald-500/50', glow: 'group-hover:shadow-emerald-500/10', bg: 'bg-emerald-500/10' },
-  blue: { text: 'text-blue-400', ring: 'group-hover:border-blue-500/50', glow: 'group-hover:shadow-blue-500/10', bg: 'bg-blue-500/10' },
-  amber: { text: 'text-amber-400', ring: 'group-hover:border-amber-500/50', glow: 'group-hover:shadow-amber-500/10', bg: 'bg-amber-500/10' },
+  red: { text: 'text-red-600', ring: 'group-hover:border-red-600/50', glow: 'group-hover:shadow-red-600/10', bg: 'bg-red-600/10' },
+  emerald: { text: 'text-emerald-600', ring: 'group-hover:border-emerald-500/50', glow: 'group-hover:shadow-emerald-500/10', bg: 'bg-emerald-500/10' },
+  blue: { text: 'text-blue-600', ring: 'group-hover:border-blue-500/50', glow: 'group-hover:shadow-blue-500/10', bg: 'bg-blue-500/10' },
+  amber: { text: 'text-amber-600', ring: 'group-hover:border-amber-500/50', glow: 'group-hover:shadow-amber-500/10', bg: 'bg-amber-500/10' },
 };
 
 /** Renders the categorized Skills section (Frontend / Backend / Database / Tools). */
@@ -23,18 +23,18 @@ export function renderSkills() {
     .map((group) => {
       const a = accentMap[group.accent];
       return `
-      <div class="group bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-md transition-all duration-300 hover:bg-white/[0.07] ${a.ring} hover:shadow-2xl ${a.glow}">
+      <div class="group bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm transition-all duration-300 hover:bg-slate-50 ${a.ring} hover:shadow-2xl ${a.glow}">
         <div class="flex items-center gap-3 mb-6">
-          <div class="p-3 rounded-2xl ${a.bg} border border-white/5">
+          <div class="p-3 rounded-2xl ${a.bg} border border-slate-200">
             <i class="${group.icon} ${a.text} text-lg" aria-hidden="true"></i>
           </div>
-          <h3 class="text-lg font-bold text-white tracking-tight">${group.label}</h3>
+          <h3 class="text-lg font-bold text-slate-900 tracking-tight">${group.label}</h3>
         </div>
         <ul class="flex flex-wrap gap-2" role="list">
           ${group.skills
             .map(
               (skill) => `
-            <li class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-800/70 border border-white/5 text-gray-300 text-xs sm:text-sm font-medium">
+            <li class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs sm:text-sm font-medium">
               <i class="${skill.icon} ${a.text} text-xs" aria-hidden="true"></i>
               ${skill.name}
             </li>`
@@ -54,7 +54,7 @@ export function renderProjects() {
   grid.innerHTML = projects
     .map(
       (project) => `
-      <article class="group bg-slate-900 border border-white/5 rounded-3xl overflow-hidden hover:border-red-600/50 transition-all duration-500 focus-within:border-red-600/50">
+      <article class="group bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:border-red-600/50 transition-all duration-500 focus-within:border-red-600/50">
         <button
           type="button"
           class="block w-full text-left cursor-pointer"
@@ -74,12 +74,12 @@ export function renderProjects() {
             </div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-white mb-2">${project.title}</h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">${project.summary}</p>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">${project.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-2">${project.summary}</p>
             <div class="flex flex-wrap gap-2">
               ${project.stack
                 .slice(0, 4)
-                .map((s) => `<span class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded-md uppercase tracking-wide">${s}</span>`)
+                .map((s) => `<span class="text-[10px] bg-white border border-slate-200 text-slate-600 px-2 py-1 rounded-md uppercase tracking-wide">${s}</span>`)
                 .join('')}
             </div>
           </div>
@@ -115,11 +115,11 @@ export function openProjectDetails(id) {
   mainImg.alt = `${project.title} — main screenshot`;
 
   document.getElementById('project-skills').innerHTML = project.stack
-    .map((s) => `<span class="px-4 py-1.5 bg-red-600/10 border border-red-600/20 text-red-500 text-xs font-black rounded-full uppercase italic">${s}</span>`)
+    .map((s) => `<span class="px-4 py-1.5 bg-red-600/10 border border-red-600/20 text-red-600 text-xs font-black rounded-full uppercase italic">${s}</span>`)
     .join('');
 
   document.getElementById('project-features').innerHTML = project.features
-    .map((f) => `<li class="flex items-start gap-3 text-gray-300 text-sm"><i class="fa-solid fa-check text-red-500 mt-1" aria-hidden="true"></i><span>${f}</span></li>`)
+    .map((f) => `<li class="flex items-start gap-3 text-slate-700 text-sm"><i class="fa-solid fa-check text-red-600 mt-1" aria-hidden="true"></i><span>${f}</span></li>`)
     .join('');
 
   document.getElementById('thumbnails-container').innerHTML = project.images
