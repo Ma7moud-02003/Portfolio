@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
 .bg-red-600 .text-white, .bg-red-700 .text-white,
 .bg-gradient-to-br, .bg-gradient-to-br .text-white,
 .bg-gradient-to-r .text-white { color: #ffffff !important; }
-.hover\\:bg-red-600:hover, .hover\\:bg-red-700:hover { color: #ffffff !important; }
+.hover\:bg-red-600:hover, .hover\:bg-red-700:hover { color: #ffffff !important; }
 
 /* Alternating section surfaces and refined card depth. */
 section { border-color: var(--color-border); }
